@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Feed</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+    <script src="js/feed.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="css/icon.jpg" alt="Lost & Found Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedhome.html" class="active">Feed</a></li>
+                <li><a href="reporthome.html">Report Item</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">Login</a>
+            <a href="register.html" class="btn">Register</a>
+        </div>
+    </header>
+
+    <main>
+        <p>Here you can browse reported lost and found items.</p>
+
+        <section class="feed-list">
+            <div class="feed-item">
+                <div class="feed-header">
+                    <img src="css/profile.jpg" alt="User Profile" class="profile-pic">
+                    <span class="username">John Doe</span>
+                    <div class="status-buttons">
+                        <button class="status found">Found</button>
+                        <button class="claim claimed">Claimed</button>
+                    </div>
+                </div>
+                <img src="css/wallet.jpg" alt="Lost Wallet" class="item-image">
+                <div class="feed-content">
+                    <h3>Lost: Wallet</h3>
+                    <p>Black leather wallet lost near Central Park on March 14.</p>
+                </div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-header">
+                    <img src="css/man.jpg" alt="User Profile" class="profile-pic">
+                    <span class="username">Jane Smith</span>
+                    <div class="status-buttons">
+                        <button class="status lost">Lost</button>
+                        <button class="claim">Claim</button>
+                    </div>
+                </div>
+                <img src="css/bag.jpg" alt="Found Backpack" class="item-image">
+                <div class="feed-content">
+                    <h3>Found: Backpack</h3>
+                    <p>Blue Adidas backpack found at the subway station on March 15.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="public/css/icon.jpg" alt="Lost & Found" class="footer-logo">
+                <p><strong>Corporate & Communications Address:</strong><br>
+                    A-143, 7th Floor, Sovereign Corporate Tower, Sector-136, Noida, Uttar Pradesh (201305)
+                </p>
+                <p><strong>Registered Address:</strong><br>
+                    K 061, Tower K, Gulshan Vivante Apartment, Sector 137, Noida, Gautam Buddh Nagar, Uttar Pradesh, 201305
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-right">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms Of Use</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="login.html">Sign In</a>
+                    <a href="register.html">Sign Up</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Need Help?</h3>
+                    <a href="#">Report issues</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lost & Found Management. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

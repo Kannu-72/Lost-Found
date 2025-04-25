@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(3, 58, 42);
+    color: white;
+    padding: 15px 20px;
+    
+
+
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation - Centered */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .btn {
+    margin-left: 10px;
+}
+
+/* Main Section */
+main {
+    margin-top: 50px;
+    padding: 20px;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: none;
+    padding: 100px 50px;
+    position: relative;
+    letter-spacing: -0.05em;
+
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    text-align: justify;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: black;
+    font-weight: bold;
+}
+
+.hero p {
+    text-align: justify;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #3b3939;
+}
+
+.hero-buttons {
+    display: flex;
+    padding: 12px 20px;
+    margin-right: 0px;
+    font-size: 3rem;
+    text-decoration: none;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.primary {
+    background: #6a5acd;
+    color: white;
+}
+
+.primary:hover {
+    background: #5a4ac3;
+}
+
+
+/* Hero Image */
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+    .hero-image img {
+        margin-top: 20px;
+    }
+    
+}
+/* Step Sections */
+.step-section {
+    display: flex;
+    flex-direction: row; /* Default layout: instruction on one side, image on the other */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px 0;
+
+}
+
+.step-section.reverse {
+    flex-direction: row-reverse; /* Reverse the order of elements */
+}
+
+.step-text {
+    width: 50%; /* Take up half the width */
+    text-align: left;
+    padding: 20px;
+}
+.step-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the image */
+}
+
+.step-image img {
+    max-width: 80%;
+    height: auto;
+    display: block; /* Remove extra space below the image */
+}
+@media (max-width: 768px) {
+    .step-section {
+        flex-direction: column;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .step-section.reverse {
+        flex-direction: column;
+    }
+
+    .step-text, .step-image {
+        width: 100%;
+    }
+
+    .step-text {
+        padding: 10px;
+    }
+    .hero{
+        margin-top: 50px;
+    }
+}
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Footer - Centered with Light Background */
+footer {
+    background-color: #ccf5f5;
+    padding: 30px 50px;
+    color: #333;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    width: 30%;
+}
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    margin: 10px 0;
+    justify-content: none;
+    /* align-items: center; */
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+
+
+
+
+.footer-right {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color:#007bff;
+}
+
+.footer-column a {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-column {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: green;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+/* Main Container */
+main {
+    text-align: center;
+    padding: 20px;
+}
+/* Feed List */
+.feed-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Feed Item (Post Box) */
+.feed-item {
+    background: white;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+/* Feed Header */
+.feed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Username */
+.username {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+/* Status Buttons */
+.status-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.status {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.found {
+    background-color: green;
+    color: white;
+    width:50%
+}
+
+.lost {
+    background-color: red;
+    color: white;
+    width:70%
+}
+
+.claim {
+    background-color: #007bff;
+    color: white;
+    width:50%
+}
+
+.claimed {
+    background-color: gray;
+    color: white;
+    width:50%
+}
+
+/* Item Image */
+.item-image {
+    width: 100%;
+    height: 200px;
+    object-fit:contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Feed Content */
+.feed-content {
+    text-align: left;
+}

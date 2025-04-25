@@ -1,0 +1,213 @@
+/* === Basic Reset & Font === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+    max-width: 1300px;
+    margin: 20px auto;
+}
+
+/* === Main Component Container Styling === */
+.profile-component-container {
+    border:none;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: visible;
+}
+
+/* === Profile Component's Header Section (Updated Layout) === */
+.profile-header-embedded {
+    position: relative;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Cover Photo Styling */
+.profile-cover-photo {
+    height: 180px; /* Adjust height */
+    background: linear-gradient(120deg, rgba(120, 120, 255, 0.7), rgba(200, 100, 255, 0.5));
+    border-radius: 8px 8px 0 0;
+    border:none;
+}
+
+/* Area below/overlapping the cover */
+.profile-header-content-area {
+    padding: 0 40px 30px 40px; /* Padding below the main content row */
+}
+
+.profile-summary {
+    display: flex;
+    align-items: center;  /* Vertically center items relative to each other */
+    margin-top: -49px; /* **Overlap Calculation: 140px (pic height) * 0.35 = 49px** */
+    position: relative;
+    z-index: 2;
+    gap: 25px; /* Add gap between pic, details, and side-content */
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    width: 170px;
+    height: 170px;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+}
+
+.profile-pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details block - Name, Bio */
+.profile-details {
+   padding-bottom: 0; /* Remove padding */
+   margin-top: 45px;
+}
+
+.profile-details h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-details .bio {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    max-width: 450px;
+}
+
+/* Wrapper for Buttons and Stats (Now part of main flow) */
+.profile-side-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right align items within this block */
+    margin-left: auto; /* Push this block to the right */
+    flex-shrink: 0;
+    margin-top: 45px;
+}
+
+/* Action Buttons */
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-follow { background-color: #333; color: white; }
+.btn-follow:hover { background-color: #555; }
+.btn-contact { background-color: white; color: #333; border: 1px solid #ccc; }
+.btn-contact:hover { background-color: #f5f5f5; border-color: #bbb; }
+
+/* Stats */
+.profile-stats {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.stat-item .label {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.stat-item .value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* === Navigation Tabs === */
+.profile-nav {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin: 0;
+    padding: 0 40px;
+    background-color: #fdfdfd;
+}
+.profile-nav ul { list-style: none; display: flex; gap: 30px; padding-left: 0; }
+.profile-nav li { padding: 15px 0; position: relative; }
+.profile-nav a { text-decoration: none; color: #666; font-weight: 500; font-size: 15px; display: flex; align-items: center; gap: 6px; transition: color 0.2s ease; }
+.profile-nav a:hover { color: #333; }
+.profile-nav a .count { background-color: #eee; color: #555; font-size: 11px; padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+.profile-nav li.active a { color: #333; font-weight: 600; }
+.profile-nav li.active::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background-color: #333; }
+
+/* === Tab Content Area === */
+.profile-tab-area {
+     padding: 30px 40px;
+}
+.tab-content { display: none; animation: fadeIn 0.5s ease-in-out; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* === Report & Request Table Styling (Remains the Same) === */
+/* Report Table */
+.report-table { width: 100%; border-collapse: collapse; margin-top: 0; font-size: 14px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+.report-table th, .report-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: middle; }
+.report-table th { background-color: #f8f9fa; font-weight: 600; color: #555; text-transform: uppercase; font-size: 12px; }
+.report-table tbody tr:last-child td { border-bottom: none; }
+.report-table tbody tr:hover { background-color: #f1f1f1; }
+.item-image { max-width: 60px; max-height: 60px; height: auto; display: block; border-radius: 4px; object-fit: cover; }
+.status { padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; display: inline-block; color: #fff; white-space: nowrap; text-align: center; min-width: 80px; }
+.status-lost-not-retrieved { background-color: #dc3545; } .status-lost-retrieved { background-color: #198754; } .status-found-not-delivered { background-color: #ffc107; color: #333; } .status-found-delivered { background-color: #0d6efd; }
+/* Requests Table */
+#requests-content h2 { font-size: 20px; margin-bottom: 15px; color: #333; font-weight: 600; }
+.request-table { width: 100%; border-collapse: collapse; margin-top: 0; font-size: 14px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); border-radius: 8px; overflow: hidden; border: 1px solid #eee; }
+.request-table th, .request-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: middle; }
+.request-table th { background-color: #f8f9fa; font-weight: 600; color: #555; text-transform: uppercase; font-size: 12px; }
+.request-table tbody tr:last-child td { border-bottom: none; }
+.request-table tbody tr:hover { background-color: #f5f5f5; }
+.request-table .image-cell { width: 100px; text-align: center; }
+.request-item-image { max-width: 80px; max-height: 80px; height: auto; display: block; margin: 0 auto; border-radius: 4px; object-fit: contain; cursor: pointer; transition: transform 0.2s ease; }
+.request-item-image:hover { transform: scale(1.1); }
+.no-image { font-size: 12px; color: #999; font-style: italic; }
+.request-table .action-cell { width: 180px; text-align: right; white-space: nowrap; }
+.action-cell .btn { padding: 6px 12px; font-size: 13px; margin-left: 8px; }
+.btn-approve { background-color: #198754; color: white; border: 1px solid #198754; }
+.btn-approve:hover { background-color: #157347; border-color: #146c43; }
+.btn-deny { background-color: #dc3545; color: white; border: 1px solid #dc3545; }
+.btn-deny:hover { background-color: #bb2d3b; border-color: #b02a37; }
+.action-cell .btn:first-child { margin-left: 0; }
+
+/* === End of CSS === */

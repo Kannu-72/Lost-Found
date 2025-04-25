@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header, .footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 48%;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.form-container {
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+    padding: 20px;
+}
+.form-container form {
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+#lostForm {
+    border-color: red;
+}
+#lostForm h3 {
+    color: red;
+    border-bottom: 2px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+#foundForm {
+    border-color: green;
+}
+#foundForm h3 {
+    color: green;
+    border-bottom: 2px solid green;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+input, textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    background: none;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #007BFF;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.auth-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+}
+.auth-container p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
